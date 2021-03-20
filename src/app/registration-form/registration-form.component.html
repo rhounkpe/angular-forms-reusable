@@ -1,0 +1,12 @@
+<form class="registration-form" (ngSubmit)="onSubmit(f.value)" #f="ngForm" >
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-normal">Registration Page</h1>
+  </div>
+
+  <app-generic-input [placeholder]="'Full Name'"
+                     [isRequired]="true"
+                     [errorMsg]="'Please enter your name'"
+                     [label]="'Full Name'"
+                     ngModel name="name">
+  </app-generic-input>
+</form>

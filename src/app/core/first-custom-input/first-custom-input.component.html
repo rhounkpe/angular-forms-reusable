@@ -3,7 +3,7 @@
     #input [placeholder]="placeholder" ngModel>
 
     <div class="d-flex">
-      <span class="v" *ngIf="input.valid">
+      <span class="v" *ngIf="$any(input).valid">
         <img src="./assets/images/v.svg">
       </span>
 
@@ -11,6 +11,6 @@
         <span class="required" *ngIf="isRequired">*</span>
       </label>
 
-      <span class="error" *ngIf="!input.valid">{{errorMsg}}</span>
+      <span class="error" *ngIf="!$any(input).valid">{{errorMsg}}</span>
     </div>
 </div>
